@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.introDisplay{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    transition: 1s;
+    align-items: center;
+    color: #dfe8f1;
+}
+
+.introDisplay h1{
+    font-size: 35px;
+}
+
+#startGame{
+    height: 50px;
+    width: 80px;
+    margin-top: 15px;
+    background-color: #f1d9bd;
+    border: 1px solid #dba879;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 200ms ease-out;
+    color: #413d3e;
+}
+
+#startGame:hover{
+    background-color: white;
+}
+
+.playerDisplay{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+.playerDisplay span{
+    padding: 5px;
+    width: auto;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.Content{
+    height: 100vh;
+    width: 100vw;
+    background-color: #7bb4bd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridContent.active{
+  display: grid;
+  height: 250px;
+  width: 250px;
+  background-color: aliceblue;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  transition: 1.5s ease ;
+}
+
+.grid.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid cornflowerblue;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.grid.active:hover{
+    background-color: cornsilk;
+}
+
+.playerWin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    height: 200px;
+    width: 250px;
+    position: fixed;
+    transform: translate(-50%,-70%);
+    transition: 1s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.playerWin.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.playerWin button{
+    padding: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#winMessage{
+    font-size: 30px;
+}
+
+.overlay{
+    z-index: -1;
+    position: fixed;
+    transition: 500ms ease;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0, 0, .5);
+}
+
+.overlay.active{
+    z-index: 5;
+    opacity: 1;
+}
+
+/* Large Phone 400px width*/
+@media only screen and (min-width:400px) {
+    .introDisplay h1{
+        font-size: 50px;
+    }
+
+    #startGame{
+        height: 60px;
+        width: 90px;
+        font-size: 30px;
+    }
+
+    .playerDisplay span{
+        font-size: 30px;
+    }
+
+    .gridContent.active{
+        height: 350px;
+        width: 350px;
+      }
+
+    .grid.active{
+    font-size: 70px;
+    }
+
+    .playerWin{
+        height: 225px;
+        width: 275px;
+    }
+
+    .playerWin button{
+        font-size: 25px;
+    }
+
+    #winMessage{
+        font-size: 35px;
+    }
+}
+
+/* 568px - Landscape Mobile*/
+@media only screen and (min-width:568px) {
+    .introDisplay{
+        transform: translate(-50%, -50%);
+    }
+
+    .introDisplay h1{
+        font-size: 40px;
+    }
+
+    #startGame{
+        height:50px;
+        width: 80px;
+        font-size: 20px;
+    }
+
+    .Content{
+        align-items: flex-end;
+    }
+    .playerDisplay span{
+        font-size: 20px;
+    }
+
+    .gridContent.active{
+        height: 160px;
+        width: 160px;
+        margin-bottom: 20px;
+      }
+
+    .grid.active{
+        font-size: 40px;
+    }
+
+    .playerWin{
+        height: 200px;
+        width: 250px;
+        transform: translate(-50%,-50%);
+    }
+
+    .playerWin button{
+        font-size: 20px;
+    }
+
+    #winMessage{
+        font-size: 30px;
+    }
+}
+
+/* 768px - Tablet*/
+@media only screen and (min-width:768px) {
+    .introDisplay h1{
+        font-size: 70px;
+    }
+
+    #startGame{
+        height:80px;
+        width: 110px;
+        font-size: 40px;
+    }
+
+    .Content{
+        align-items: center;
+    }
+
+    .playerDisplay span{
+        font-size: 45px;
+    }
+
+    .gridContent.active{
+        height: 450px;
+        width: 450px;
+      }
+
+    .grid.active{
+        font-size: 100px;
+    }
+
+    .playerWin{
+        height: 400px;
+        width: 450px;
+    }
+
+    .playerWin button{
+        font-size: 40px;
+    }
+
+    #winMessage{
+        font-size: 50px;
+    }
+}
+
+/* 1024px - Small desktop*/
+@media only screen and (min-width:1024px) {
+
+    .gridContent.active{
+        margin-top: 150px;
+        height: 450px;
+        width: 450px;
+      }
+}
