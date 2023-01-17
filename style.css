@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.calculatorBody{
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: 2fr repeat(5,1.5fr);
+    grid-template-areas: "calculate"
+                         "first"
+                         "second"
+                         "third"
+                         "fourth"
+                         "fifth";
+}
+.screen-row{
+    grid-area: calculate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    height: 60%;
+    width: 90%;
+    border: 2px solid black;
+    font-size: 40px;
+}
+
+.screen span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input button{
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.input button:hover{
+    background-color: grey;
+    color: white;
+}
+
+.first-row{
+    grid-area: first;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second-row{
+    grid-area: second;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.third-row{
+    grid-area: third;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fourth-row{
+    grid-area: fourth;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fifth-row{
+    grid-area: fifth;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.fifth-row .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputZero button{
+    height: 90%;
+    width: 90%;
+    border-radius:20px;
+    text-align: left;
+    padding-left: 24px;
+}
