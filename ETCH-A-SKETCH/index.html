@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ETCH A SKETCH</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>ETCH A SKETCH</h1>
+            </div>
+            <div class="sidebar">
+                <div class="gridSize">
+                    <span id="slideN"></span> grid
+                </div>
+                <div class="slideContainer">
+                    <input type="range" min="2" max="64" value="16" class="slider" id="myRange">
+                </div>
+                <div class="inputGrid">
+                    <label for="gridInput">Grid size: </label>
+                    <input  id="gridInput" type="number" min="2" max="64" placeholder="2-64">
+                    <button id="gridChange">Change</button>
+                </div>
+                <div class="hideGrid">
+                    <button id ="hide">Hide grid</button>
+                </div>
+                <div class="resetGrid">
+                    <button id="gridReset">Clear grid</button>
+                </div>
+            </div>
+            <div class="sidebarTwo">
+                <div class="color-one">
+                    <button class="colorButton" id="defaultColor">
+                        Default black
+                    </button>
+                </div>
+                <div class="color-two">
+                    <button class="colorButton" id="randomColor">
+                        Random
+                    </button>
+                </div>
+                <div class="color-three">
+                    <button class="colorButton" id="rainbowColor">
+                        Rainbow
+                    </button>
+                </div>
+                <div class="color-four">
+                    <button class="colorButton" id="pickColor">
+                        Pick color
+                    </button>
+                </div>
+                <div class="color-pick">
+                    <input type="color" id="colorPick" value="#000000">
+                </div>
+                <div class="color-five">
+                    <button class="colorButton" id="eraseColor">
+                        Eraser
+                    </button>
+                </div>
+            </div>
+            <div class="gridContainer">
+                <div class="grid">
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
