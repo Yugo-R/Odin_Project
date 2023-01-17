@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rock Paper Scisor</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="head-content">
+            <h1>Rock, Paper, Scisor Game</h1>
+        </div>
+        <div class="main-content">
+            <div class="player-contents">
+                <div class="player-score">
+                    <h1>You: <span id ='pScore'>0</span></h1>
+                </div>
+                <div class="player-box">
+                </div>
+            </div>
+            <div class="text">
+                <h2 id='resultText'>Welcome challenger ! Choose your weapon to start the game</h2>    
+            </div>
+            <div class="computer-contents">
+                <div class="computer-score">
+                    <h1>Computer:<span id='cScore'>0</span></h1>
+                </div>
+                <div class="computer-box">
+                </div>
+            </div>
+        </div>
+        <div class="bottom-contents">
+            <div class="playerChoices">
+                <button class="button" id='rock' onclick="playerClick(this.id)">Rock</button>
+                <button class="button" id='scissors' onclick="playerClick(this.id)">Scissors</button>
+                <button class="button" id='paper' onclick="playerClick(this.id)">Paper</button>
+            </div>
+            <div class="tryAgain">
+                <button class="refreshGameButton" id="playAgain" onclick="restartGame()">Play Again</button>
+            </div>
+            <div class="aiMumble">
+                <h2 id="cpuMumble">You dare challenge me Human!!</h2>
+            </div>
+        </div>
+    </body>
+</html>

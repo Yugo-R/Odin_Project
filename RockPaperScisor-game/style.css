@@ -1,0 +1,120 @@
+*{
+    margin:0px;
+    padding:0px;
+    text-decoration:none;
+    list-style:none;
+    box-sizing:border-box;
+}
+body{
+    background-color: bisque;
+    font-family: Press Start 2P;
+}
+
+.head-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:15vh;
+    border-bottom: 5px solid black;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+}
+
+.player-contents{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.computer-contents{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.player-box{
+    width: 180px;
+    height: 180px;
+    background-image: url('https://yugo-r.github.io/image-repo/questionMarkN.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.computer-box{
+    width: 180px;
+    height: 180px;
+    background-image: url('https://yugo-r.github.io/image-repo/questionMarkN.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    height: 100%;
+}
+
+.bottom-contents{
+    display: flex;
+    width: auto;
+    height: 35vh;
+}
+
+.playerChoices{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    width: 40vw;
+    height: 100%;
+}
+
+.button{
+    background-color: bisque;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 15px 30px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover{
+    background-color: white;
+}
+
+.tryAgain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height:100%;
+}
+
+.refreshGameButton{
+    display: none;
+    cursor: pointer;
+}
+
+.refreshGameButton{
+    background-color: rgb(229, 143, 143);
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-weight: bold;
+}
+
+.aiMumble{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40vw;
+    height: 100%;
+}
