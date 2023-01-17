@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Library App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <h1>Library App</h1>
+        </div>
+        <div class="modalBook" id="modalBook">
+            <div class="modal-header">
+                <div class="title">Add a new book</div>
+                <button data-close-button ="#modalBook" class="close-button">&times;</button>
+            </div>
+            <form data-modal-book class="modal-body" autocomplete="off">
+                <label for="bookTitle" id="bookTitleLabel">Title: </label>
+                <input type="text" id="bookTitle" name="bookTitle" required>
+                <label for="bookAuthor" id="bookAuthorLabel">Author: </label>
+                <input type="text" id="bookAuthor" name="bookAuthor" required>
+                <label for="page" id="pageLabel">Page: </label>
+                <input type="number" id="page" name="page" required>
+                <label for="bookRead" id="readLabel">Readed</label>
+                <input type="checkbox" id="bookRead" name="bookRead">
+                <input id="submitbtn" type="submit" value="Add book">
+            </form>
+        </div>
+        <div class="modalFolder" id="modalFolder">
+            <div class="modal-header">
+                <div class="title">Add a new folder</div>
+                <button data-close-button ="#modalFolder" class="close-button">&times;</button>
+            </div>
+            <div class="modal-folder-body">
+                <div class="folderInput">
+                    <label for="folderName">Name of the folder: </label>
+                    <input type="text" id="folderName" name="folderName">
+                </div> 
+                <input id="submitFolderName" type="submit" value="create folder">
+            </div>
+        </div>
+        <div class="dropdownBtn">
+            <div class="todo">
+                <button data-modal-target="#modalFolder">New folder</button>
+                <button data-modal-target="#modalBook">Add a book</button>
+            </div>
+            <button data-modal-target="#modalBook" class="addBook">+</button>
+        </div>
+        <div class="container" id="container">
+        </div>
+        <div id="overlay"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
