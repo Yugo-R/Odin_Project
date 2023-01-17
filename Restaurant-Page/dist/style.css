@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+@font-face {
+    font-family: ninja;
+    src: url(./font/Japanese\ 3017.ttf);
+  }
+
+
+#content{
+    width: 100%;
+    height: 90%;
+    background-image: url(./img/sushibg4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    height: 10%;
+    width: 100%;
+}
+
+#title{
+    font-family: ninja;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: black;
+    font-size: 20px;
+}
+
+.nav-button{
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.burgerline{
+    height: 2px;
+    width: 65%;
+    background-color: black;
+}
+
+.navbarOverlay.active.out{
+    animation: slide-out 1.5s;
+}
+
+@keyframes slide-out {
+    0% {top:0; right:0; bottom:0 ; left:0;};
+    50% {left: 50%;}
+    70% {left: 150%;}
+    100% {left:200%; top: 0;};
+}
+
+.navbarOverlay.active{
+    position: fixed;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    animation: slide 1.5s forwards;
+}
+
+@keyframes slide {
+    0% {right: -100%; top: 0};
+    50% {right: 50%;}
+    70% {right: 40%;}
+    100% {top:0; right:0; bottom:0 ; left:0;};
+}
+
+.navbarOverlay ul{
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style-type: none;
+    height: 30%;
+    
+}
+
+.navbarOverlay ul li button{
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.overlayClose{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sushiHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.homeTitle{
+    color: white; 
+    font-weight: bold;
+    font-size: 35px;
+    background-color: rgb(0,0,0,0.3);
+    transform:translate(0%,-150%);
+}
+
+.menuBtn{
+    padding: 10px;
+    background-color: rgb(0,0,0,0.3);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu{
+    height: 85%;
+    width: 75%;
+    background-color: rgb(0,0,0,0.5);
+    overflow: scroll;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.menuTitle{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menuDisplay{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: auto;
+}
+
+.menuDisplay img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.menuDisplay .grid{
+    background-color: rgb(0,0,0,0.5);
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.sushiPrice{
+    color: white;
+}
+
+.contactPage{
+    height: 85%;
+    width: 85%;
+    background-color: rgb(0,0,0,0.5);
+    display: grid;
+    grid-template-rows: 1.5fr 1.5fr;
+    gap: 15px;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+
+
+.contactTitle{
+    font-size: 35px;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.contact form label{
+    color: white;
+    font-size: 20px;
+}
+
+.contact input{
+    height: 20px;
+}
+
+.contact form input[type=submit]{ 
+    width: 50%;
+    height: 30px;
+    align-self: center;
+    margin-top: 15px;
+    color: white;
+    background-color:transparent;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.contact form input[type=submit]:hover{ 
+    background-color: wheat;
+    color: black;
+    border: none;
+    font-weight: bold;
+}
+
+
+.locationMap{
+   display: flex;
+}
+
+#map{
+    flex-grow: 1;
+    height: 150px;
+    margin: 15px;
+}
+
+@media only screen and (min-height:280px) and (max-height:414px){
+
+    #content{
+        height: 85%;
+    }
+
+    /* overlay */
+    .navbarOverlay ul{
+        margin-top: 15px;
+    }
+
+    /* navbar */
+    #navbar{
+        height: 15%;
+    }
+
+    /* menu page */
+    .menu{
+        width: 50%;
+    }
+
+    .menuTitle{
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .grid{
+        width: 50%;
+        justify-self: center;
+    }
+
+    /* contact page */
+    .contactPage{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+    }
+
+    #map{
+        justify-self: center;
+        align-self: center;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (min-height:823px){
+
+    /* navbar */
+    #title{
+        font-size: 40px;
+    }
+
+    .nav-button{
+        margin-right: 20px;
+    }
+
+    .burgerline{
+        height: 4px;
+        width: 75%;
+    }
+
+    /* overlay */
+    .navbarOverlay ul li button{
+        font-size: 35px;
+    
+    }
+
+    .overlayClose{
+        font-size: 35px;
+    }
+
+    /* home page */
+    .homeTitle{
+        font-size: 50px;
+    }
+
+    .menuBtn{
+        font-size: 25px;
+    }
+
+    /* menu page */
+    .menuTitle{
+        font-size: 35px;
+    }
+
+    .grid{
+        width: 50%;
+        justify-self: center;
+    }
+
+    .sushiPrice{
+        font-size: 25px;
+    }
+
+    /* contact page */
+    .contactPage{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+        height: 45%;
+    }
+
+    .contact{
+        align-self: center;
+        justify-self: center;
+    }
+
+    .contactTitle{
+        margin-bottom: 15px;
+    }
+
+    .contact form{
+        justify-content: flex-start;
+    }
+
+    .contact form input{
+        margin-bottom: 25px;
+        height: 30px;
+        font-size:25px ;
+    }
+
+    .contact form label{
+        font-size: 30px;
+    }
+
+    #map{
+        height: 65%;
+        align-self: center;
+    }
+
+    @media only screen and (min-width:1366px){
+        .grid{
+            width: 25%;
+        }
+
+        .locationMap{
+            display: inherit;
+        }
+
+        #map{
+            flex-grow: inherit;
+            width: 65%;
+            height: 75%;
+            justify-self: center;
+        }
+    }
+}
+
