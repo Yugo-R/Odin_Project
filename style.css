@@ -1,0 +1,184 @@
+*{
+    margin:0px;
+    padding:0px;
+    text-decoration:none;
+    list-style:none;
+    box-sizing:border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.6fr 3fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "title title title"
+    "sidebar grid sidebarTwo"
+    "footer footer footer";
+}
+
+.title{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: 1fr 2fr;
+}
+
+.sidebarTwo{
+    grid-area: sidebarTwo;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
+}
+
+.color-one{
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.color-two{
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.color-three{
+    grid-row: 3;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.color-four{
+    display: flex;
+    grid-row: 4;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.color-five{
+    grid-row: 5;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.color-pick{
+    grid-row: 4;
+    grid-column: 2;
+    align-self: center;
+    justify-self: start;
+    display: none;
+}
+
+.colorButton{
+    border: 2px solid black;
+    outline: none;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.gridContainer{
+    grid-area: grid;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.slider{
+    width: 100%;
+}
+
+.slideContainer{
+    grid-row: 2;
+    grid-column: 2;
+    align-self: center;
+}
+
+.gridSize{
+    grid-row: 2;
+    grid-column: 2;
+    align-self: end;
+    justify-self: center;
+}
+
+.inputGrid{
+    display: flex;
+    justify-content: space-around;
+    grid-row: 2;
+    grid-column: 2;
+    align-self: start;
+}
+
+.hideGrid{
+    grid-row: 3;
+    grid-column: 2;
+    justify-self: center;
+    align-self: end;
+}
+
+.resetGrid{
+    grid-row: 4;
+    grid-column: 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.grid{
+    width: 500px;
+    height: 500px;
+    border: solid 10px rgb(113, 114, 116);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+}
+
+.newGrid{
+    border: solid 1px black;
+}
+
+.disable-select{
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+#gridInput{
+    width: 3.5em;
+}
+
+#hide{
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+}
+
+#gridReset{
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+}
